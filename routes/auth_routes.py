@@ -5,6 +5,7 @@ from utils.email_sender import enviar_correo_credenciales
 
 auth_bp = Blueprint("auth_bp", __name__, url_prefix="/")
 
+
 @auth_bp.route("/")
 def home():
     return redirect(url_for("auth_bp.login"))
@@ -57,3 +58,5 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for("auth_bp.login"))
+
+
