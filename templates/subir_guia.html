@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4">Subir Guía de Aprendizaje</h2>
+<form method="POST" enctype="multipart/form-data" class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Nombre de la Guía:</label>
+    <input type="text" name="nombre" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Programa de Formación:</label>
+    <select name="programa" class="form-select" required>
+      {% for prog in programas %}
+      <option>{{ prog }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-12">
+    <label class="form-label">Descripción:</label>
+    <textarea name="descripcion" class="form-control" rows="3" required></textarea>
+  </div>
+  <div class="col-12">
+    <label class="form-label">Archivo PDF:</label>
+    <input type="file" name="archivo_pdf" accept=".pdf" class="form-control" required>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Subir Guía</button>
+  </div>
+</form>
+{% endblock %}

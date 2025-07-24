@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4">Registro de Instructor</h2>
+<form method="POST" class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Nombre completo:</label>
+    <input type="text" name="nombre" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Correo electrónico:</label>
+    <input type="email" name="correo" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Regional:</label>
+    <select name="regional" class="form-select" required>
+      {% for reg in regionales %}
+      <option>{{ reg }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Contraseña:</label>
+    <input type="password" name="password" class="form-control" required>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+    <a href="{{ url_for('auth_bp.login') }}" class="btn btn-link">¿Ya tienes cuenta?</a>
+  </div>
+</form>
+{% endblock %}
