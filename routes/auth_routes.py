@@ -3,7 +3,7 @@ from flask_login import login_user, logout_user, login_required
 from models.instructor import Instructor, REGIONALES
 from utils.email_sender import enviar_correo_credenciales
 
-auth_bp = Blueprint("auth_bp", __name__, url_prefix="/")
+auth_bp = Blueprint("auth_bp", __name__,)
 
 
 @auth_bp.route("/")
