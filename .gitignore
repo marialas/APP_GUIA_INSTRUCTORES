@@ -1,6 +1,13 @@
 .env
 __pycache__/
 *.pyc
+*.pyo
 instance/
+venv/
+.venv/
+.vscode/
+.idea/
+*.log
+.DS_Store
 
 
