@@ -1,0 +1,9 @@
+Flask
+Flask-Login
+Flask-Mail
+mongoengine
+pymongo
+python-dotenv
+Flask-WTF
+email_validator
+dnspython
